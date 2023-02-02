@@ -13,7 +13,9 @@ def func1(arr, low, high):
         func1(arr, pi + 1, high)
 
 def func2(array, start, end):
-    p = array[start]
+    pivotIndex = random.randint(start, end)
+    p = array[pivotIndex]
+    array[pivotIndex], array[start] = array[start], array[pivotIndex]
     low = start + 1
     high = end
     while True:
@@ -44,9 +46,9 @@ def main():
 
     for i in range(len(data)):
         print(f'size of array: {sizeList[i]}, time taken to sort: {timeList[i]}')
-    
+
     plt.plot(sizeList, timeList)
-    plt.title("Time Complexity of Quicksort for Different Sized Arrays")
+    plt.title("Time Complexity of Optimized Quicksort for Different Sized Arrays")
     plt.xlabel("Size of Array")
     plt.ylabel("Time Taken to Sort")
     plt.show()
