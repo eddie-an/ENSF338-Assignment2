@@ -41,7 +41,7 @@ def main():
     for i in range(len(data)):
         sizeList.append(len(data[i]))
 
-    for i in range(10):
+    for i in range(len(data)):
         print(f'size of array: {sizeList[i]}, time taken to sort: {timeList[i]}')
     
     plt.plot(sizeList, timeList)
