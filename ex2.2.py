@@ -43,12 +43,12 @@ def main():
         sizeList.append(len(data[i]))
 
     for i in range(len(data)):
-        print(f'size of array: {sizeList[i]}, time taken to sort: {timeList[i]}')
+        print(f'size of array: {sizeList[i]}, time taken to sort (in seconds): {timeList[i]}')
     
     plt.plot(sizeList, timeList)
     plt.title("Time Complexity of Quicksort for Different Sized Arrays")
     plt.xlabel("Size of Array")
-    plt.ylabel("Time Taken to Sort")
+    plt.ylabel("Time Taken to Sort (in seconds)")
     plt.show()
 
 if __name__ == "__main__":
